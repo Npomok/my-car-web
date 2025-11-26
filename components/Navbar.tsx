@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   return (
@@ -6,12 +7,25 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           
-          {/* โลโก้ร้านคุณ */}
-          <Link href="/">
-            <span className="text-2xl font-bold text-gray-900 tracking-wide">
-              MD<span className="text-green-800"> เกษตรยนต์</span>
-            </span>
-          </Link>
+         {/* เริ่มต้นส่วนโลโก้และชื่อ */}
+    <Link href="/" className="flex items-center gap-2 group">
+      {/* 1. ส่วนรููปโลโก้ */}
+      <div className="relative w-10 h-10 flex-shrink-0 transition-transform group-hover:scale-110">
+        <Image
+            src="logomd.jpg"  // <-- ตรวจสอบให้แน่ใจว่าชื่อไฟล์ตรงกัน
+            alt="MD Kaset Yon Logo"
+            fill
+            className="object-contain"
+            priority
+        />
+      </div>
+
+      {/* 2. ส่วนข้อความที่ปรับแต่งใหม่ */}
+      <span className="font-extrabold text-2xl tracking-tight text-gray-900 dark:text-white transition-colors group-hover:text-blue-600">
+        MDเกษตรยนต์
+      </span>
+    </Link>
+    {/* สิ้นสุดส่วนโลโก้และชื่อ */}
 
           {/* เมนูขวา: เน้นช่องทางติดต่อ */}
           <div className="flex items-center space-x-6">
