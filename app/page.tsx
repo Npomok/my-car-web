@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { supabase } from '@/lib/supabaseClient';
 import SearchBar from '@/components/SearchBar';
-
 export const revalidate = 0;
 
 export default async function Home({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
@@ -29,7 +28,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ q
       <div className="relative h-[450px] w-full bg-gray-900">
         {/* รูปภาพเพียวๆ ชัดแจ๋ว */}
         <Image 
-             src="https://scontent.fbkk22-3.fna.fbcdn.net/v/t39.30808-6/480178407_1013659937483795_8759565514563210623_n.jpg?stp=c185.0.1108.1108a_dst-jpg_s206x206_tt6&_nc_cat=111&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeEuE0yb-mf_fpzCQG8hTrT6M68EbAqVnNEzrwRsCpWc0VvDEnu38hXpxHFcbe3VWthqRF0tyx69zHhdrukB6ym2&_nc_ohc=zCSiGL1hOEgQ7kNvwGVjPfC&_nc_oc=AdnDI3wb1guAtB_kH_Ib6LvZMZaaFC_UpE0Y9gGOKDwTbFSSpg8gaDnLfxgCjzP_vZo&_nc_zt=23&_nc_ht=scontent.fbkk22-3.fna&_nc_gid=PMeg8rEIyqmfRq_0_D8SdQ&oh=00_AfgVpTNH_pw2n-KbRCUCqkuK8nNbH66L3KyDOeAr5KRbZw&oe=692C7F94" 
+             src="/images/bg-hero.jpg"
              alt="Background" 
              fill 
              style={{ objectFit: 'cover' }} 
@@ -43,7 +42,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ q
       <div className="relative z-10 -mt-20 px-4">
         <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 border border-gray-100 text-center">
           <h1 className="text-4xl font-extrabold text-black mb-2">MD เกษตรยนต์</h1>
-          <p className="text-lg text-gray-600 mb-6 font-medium">ศูนย์รวมรถสปอร์ตและรถหรูคุณภาพเยี่ยม</p>
+          <p className="text-lg text-gray-600 mb-6 font-medium">รถดั๊มลานมีคุณภาพ</p>
           
           {/* ช่องค้นหาอยู่ตรงนี้ ชัดเจน สวยงาม */}
           <SearchBar />
@@ -54,7 +53,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ q
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-3xl font-bold text-black border-l-4 border-red-600 pl-4">
-            {keyword ? `ผลการค้นหา: "${keyword}"` : 'รถมาใหม่ (New Arrivals)'}
+            {keyword ? `ผลการค้นหา: "${keyword}"` : 'รายการรถ'}
           </h2>
           {keyword && (
             <Link href="/" className="text-red-600 font-bold hover:underline">

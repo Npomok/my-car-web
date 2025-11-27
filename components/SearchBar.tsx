@@ -25,7 +25,7 @@ export default function SearchBar() {
       <div className="relative">
         <input 
           type="text" 
-          placeholder="ค้นหารุ่นรถที่คุณสนใจ... ()" 
+          placeholder="ค้นหารุ่นรถที่คุณสนใจ... " 
           className="w-full p-4 pl-6 rounded-full border-2 border-gray-200 focus:border-red-600 focus:outline-none shadow-sm text-gray-800 text-lg"
           value={term}
           onChange={(e) => setTerm(e.target.value)}
