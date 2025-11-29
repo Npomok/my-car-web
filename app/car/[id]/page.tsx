@@ -88,7 +88,7 @@ export default async function CarDetail({ params }: { params: Promise<{ id: stri
               </p>
 
               <div className="mt-8 space-y-3">
-                <a href="tel:0900317698" className="block w-full text-center bg-black text-white py-4 rounded-xl font-bold text-lg hover:bg-gray-800 transition shadow-md">
+                <a href="tel:0947090666" className="block w-full text-center bg-black text-white py-4 rounded-xl font-bold text-lg hover:bg-gray-800 transition shadow-md">
                    📞 โทรสอบถาม
                 </a>
                 <a href="https://line.me/ti/p/_W6gW0tUAy" className="block w-full text-center bg-[#00B900] text-white py-4 rounded-xl font-bold text-lg hover:bg-[#00a000] transition shadow-md">
